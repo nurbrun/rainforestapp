@@ -1,0 +1,7 @@
+<h1>Nurbrun's Supercar POTD!(<%= @pictures.length %>)</h1>
+
+<%= link_to "New Product", "/products/new" %>
+
+<% @products.each do |product| %>
+  <p><%= product.name %>, <%= product.description %></p>
+<% end %>
