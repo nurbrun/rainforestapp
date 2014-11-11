@@ -3,6 +3,6 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p><%= product.name %>, <%= product.description %></p>
-  <%= link_to "/products/#{product.id}" %>
+  <p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
+  <%= link_to image_tag(product.name), "/products/#{product.id}" %>
 <% end %>
