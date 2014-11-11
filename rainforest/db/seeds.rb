@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'csv'
+# require 'csv'
 
 list = [
 	{
@@ -19,7 +19,7 @@ list = [
 		price_in_cents: 20000
 	},
 	{
-		name: "Goat",
+		name: "Goats",
 		description: "Make your own cheese.",
 		price_in_cents: 20000
 	},
@@ -30,14 +30,14 @@ list = [
 	}
 ]
 
-csv = CSV.read(Rails.root + "db/data.csv")
-csv[1..-1].each do |entry|
-	Product.create(
-		name: entry[0],
-		description: entry[1],
-		price_in_cents: entry[2]
-	)
-end
+# csv = CSV.read(Rails.root + "db/data.csv")
+# csv[1..-1].each do |entry|
+# 	Product.create(
+# 		name: entry[0],
+# 		description: entry[1],
+# 		price_in_cents: entry[2]
+# 	)
+# end
 
 # binding.pry
 # list.each do |item|
