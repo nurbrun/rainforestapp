@@ -7,28 +7,52 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'csv'
 
-list = [
-	{
-		name: "Boots",
-		description: "Were made for walkin'",
-		price_in_cents: 20000
-	},
-	{
-		name: "Shoes",
-		description: "Just do it.",
-		price_in_cents: 20000
-	},
-	{
-		name: "Goats",
-		description: "Make your own cheese.",
-		price_in_cents: 20000
-	},
-	{
-		name: "Hairspray",
-		description: "For ultimate lift.",
-		price_in_cents: 20000
-	}
-]
+User.destroy_all
+Product.destroy_all
+
+User.create!({
+  email: "nurbrun@hotmail.com",
+  name: "Bruno Alfano-Rizzo",
+  password: "asdqwe123",
+  password_confirmation: "asdqwe123"
+  }
+)
+
+100.times do |i|
+
+Product.create({
+  name: Faker::Company.bs,
+  description: Faker::Company.bs,
+  price_in_cents: i
+  }
+)
+end
+
+
+
+
+# list = [
+# 	{
+# 		name: "Boots",
+# 		description: "Were made for walkin'",
+# 		price_in_cents: 20000
+# 	},
+# 	{
+# 		name: "Shoes",
+# 		description: "Just do it.",
+# 		price_in_cents: 20000
+# 	},
+# 	{
+# 		name: "Goats",
+# 		description: "Make your own cheese.",
+# 		price_in_cents: 20000
+# 	},
+# 	{
+# 		name: "Hairspray",
+# 		description: "For ultimate lift.",
+# 		price_in_cents: 20000
+# 	}
+# ]
 
 # csv = CSV.read(Rails.root + "db/data.csv")
 # csv[1..-1].each do |entry|
